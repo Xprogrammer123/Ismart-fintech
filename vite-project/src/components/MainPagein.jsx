@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from "./carousel";
 import { PiStarFill } from "react-icons/pi";
 import { PiStarHalfFill } from "react-icons/pi";
 import { IoIosArrowForward } from "react-icons/io";
@@ -7,28 +6,21 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
-import { BsQrCode } from "react-icons/bs";
-import { ImConnection } from "react-icons/im";
-import { FaMoneyBillTransfer } from "react-icons/fa6";
-import { BsTicketPerforated } from "react-icons/bs";
-import { HiGiftTop } from "react-icons/hi2";
-import { BsShop } from "react-icons/bs";
-import ImageSlider from "./ImageSlider";
-import GameCarousel from "./GameCarousel";
 import { RiVisaLine } from "react-icons/ri";
 import { RiMastercardLine } from "react-icons/ri";
 import { SiChase } from "react-icons/si";
 import Sidebar from "./Sidebar";
 import BottomNavbar from "./BottomNavbar";
+import { GiWallet } from "react-icons/gi";
+import { PiHandDeposit } from "react-icons/pi";
+import { MdQrCodeScanner } from "react-icons/md";
+import { CiSquarePlus } from "react-icons/ci";
+import AdsCarousel from "./AdsCarousel";
 
 function Main() {
-
-
 	return (
 		<>
-			<section
-				className={`h-screen md:w-4/5 w-full overflow-x-hidden`}
-			>
+			<section className={`h-screen md:w-4/5 w-full overflow-x-hidden`}>
 				<header className="w-screen h-16 border border-gray-200 flex justify-between items-center p-4 shadow-sm fixed top-0 left-0 bg-text-color z-10">
 					{/* Logo */}
 					<img
@@ -45,7 +37,6 @@ function Main() {
 					{/* Modal Button */}
 					<div className="ml-auto space-x-3 sm:space-x-5 ">
 						<button>
-							
 							<Sidebar />
 						</button>
 					</div>
@@ -54,213 +45,144 @@ function Main() {
 				<br />
 				<br />
 				<br />
+
 				<div className="w-full h-14 border border-gray-300 flex justify-center mb-7 bg-gray-200">
 					ADS
 				</div>
 
-				<div className="flex flex-col md:flex-row mb-4">
-					{/* Carousel on top for mobile, left for larger screens */}
-					<div className="w-full md:w-1/2 order-2 md:order-1">
-						<Carousel />
-					</div>
+				<div className="h-56 w-full bg-custom-color -mt-10 mb-32 px-3">
+					<div className="border-2 border-gray-300 h-80 w-full md:4/5 shadow-xl mx-auto rounded-3xl bg-white mb-10 md:py-10 md:px-20 px-4 py-2 flex justify-between items-center">
+						{/* Left Side: Wallet Balance and Buttons */}
+						<div className="flex flex-col space-y-6">
+							<h2 className="md:text-4xl text-2xl font-bold font-mono">
+								Wallet Balance
+							</h2>
+							<h3 className="md:text-3xl text-xl font-bold font-mono">
+								N 4000
+							</h3>
 
-					{/* Buttons on the bottom for mobile, right for larger screens */}
-					<div className="w-full md:w-1/2 flex flex-col items-center md:items-end mt-4 md:mt-0 md:ml-8 order-1 md:order-2 mb-10">
-						<h1 className="font-bold text-2xl md:text-4xl font-mono mb-6 md:mb-8 text-center md:text-left md:mr-60">
-							Our Services
-						</h1>
+							<div className="grid grid-cols-2 gap-4">
+								<button className="border h-14 w-44 rounded-lg shadow-xl font-bold font-mono text-xl flex items-center p-2 mt-5 md:mt-0">
+									<GiWallet className="text-2xl mr-2" /> Fund Wallet
+								</button>
+								<button className="border h-14 w-44 rounded-lg shadow-xl font-bold font-mono text-xl flex items-center p-2 ml-32 md:ml-0 mt-5 md:mt-0">
+									<PiHandDeposit className="text-2xl mr-2" /> Transfer
+								</button>
+							</div>
+						</div>
 
-						<div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 justify-center md:mr-28">
-							<button className="rounded-lg w-full h-24 px-5 font-sans font-semibold shadow-lg">
-								<FaMoneyBillTransfer className="flex justify-center text-2xl font-bold text-custom-color mb-2" />
-								Airtime2Cash
-							</button>
-							<button className="rounded-lg w-full h-24 px-5 font-sans font-semibold shadow-lg">
-								<BsQrCode className="flex justify-center text-2xl font-bold text-custom-color mb-2" />
-								QR code
-							</button>
-							<button className="rounded-lg w-full h-24 px-5 font-sans font-semibold shadow-lg">
-								<ImConnection className="flex justify-center text-2xl font-bold text-custom-color mb-2" />
-								Recharge
-							</button>
-							<button className="rounded-lg w-full h-24 px-5 font-sans font-semibold shadow-lg">
-								<BsTicketPerforated className="flex justify-center text-2xl font-bold text-custom-color mb-2" />
-								Purchase Ticket
-							</button>
-							<button className="rounded-lg w-full h-24 px-5 font-sans font-semibold shadow-lg">
-								<HiGiftTop className="flex justify-center text-2xl font-bold text-custom-color mb-2" />
-								Gift Card
-							</button>
-							<button className="rounded-lg w-full h-24 px-5 font-sans font-semibold shadow-lg">
-								<BsShop className="flex justify-center text-2xl font-bold text-custom-color mb-2" />
-								Market Place
+						{/* Center: QR Code Payment Button */}
+						<div className="flex justify-center items-center">
+							<button className="border md:h-20 md:w-60 rounded-lg shadow-xl font-bold font-mono text-xl flex items-center p-2 h-20 w-36 mr-5 md:mr-0 -mt-14 md:-mt-0">
+								<MdQrCodeScanner className="text-6xl mr-2" /> QR Code Payment
 							</button>
 						</div>
+
+						{/* Right Side: Pascoin Details */}
 					</div>
 				</div>
 
-				<div className="border border-gray-400 w-4/6 flex justify-center md:ml-52 mb-5 ml-20">
-					Pascoin ads
-				</div>
+				<div className="flex flex-col md:flex-row justify-between items-center mt-10 w-full ml-0 md:ml-14">
+					{/* Price of Pascoin (Left on larger screens, top on mobile) */}
+					<div className="text-left space-y-2 mr-44 md:mr-0">
+						<h3 className="text-2xl font-bold font-mono">Price of Pascoin</h3>
+						<h3 className="text-3xl font-bold font-mono">N 100</h3>
+					</div>
 
-				<div className="px-4 sm:px-8 lg:px-16">
-					<h3 className="text-custom-color font-bold text-xl sm:text-2xl text-center sm:text-left">
-						Most Ordered Products
-					</h3>
-					<a
-						href=""
-						className="font-semibold text-base sm:text-lg justify-center sm:justify-end flex mt-2 sm:mt-0"
-					>
-						more <IoIosArrowForward className="mt-1 ml-2" />
-					</a>
-					<br />
-					<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-5 gap-x-5 sm:gap-x-8 mt-4">
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Product"
-							className="h-48 w-48 sm:h-44 sm:w-44 rounded-lg border-2 border-custom-color md:h-36 md:w-36"
-						/>
+					{/* Total Coins (Right on larger screens, bottom on mobile) */}
+					<div className="text-right space-y-2 mt-4 md:mt-0 mr-0 ml-44 md:ml-0 md:mr-28">
+						<h3 className="text-2xl font-bold font-mono">Total Coins</h3>
+						<h4 className="text-xl font-bold font-mono">P 20</h4>
 					</div>
 				</div>
 
-				<br />
-				<br />
-				<br />
-				<div className="px-4 sm:px-8 lg:px-16">
-					{/* Heading */}
-					<h3 className="text-custom-color font-bold text-xl sm:text-2xl text-center sm:text-left mb-4 sm:mb-0">
-						Unboxing
-					</h3>
+				<AdsCarousel />
 
-					{/* "More" link */}
-					<a
-						href=""
-						className="font-semibold text-base sm:text-lg flex justify-center sm:justify-end mb-4 sm:mb-0"
-					>
-						more <IoIosArrowForward className="ml-2" />
-					</a>
+				<div className="mb-20 flex flex-col md:flex-row">
+					{/* Image */}
+					<div className="w-full md:w-[880px] h-44 md:h-96 border rounded-2xl md:ml-5">
+						<img
+							src="https://t4.ftcdn.net/jpg/01/95/78/87/360_F_195788717_Ba8397mYBadW3JUx5SQejAxpRN02DyEF.jpg"
+							alt="Store Image"
+							className="h-full w-full rounded-2xl "
+						/>
+					</div>
 
-					{/* Image and Slider container */}
-					<div className="w-full h-auto mx-auto mt-10 sm:mt-20 flex flex-col md:flex-row md:h-[500px] items-center ">
-						{/* Image on left, takes 50% of the width */}
-						<div className="w-full md:w-1/2 h-full md:ml-36 ml-24">
+					{/* Box Container: Stacked Vertically */}
+					<div className="flex md:flex-col space-y-4 w-full md:w-1/4 md:h-96 md:ml-4 grid-col-2 space-x-3 ">
+						{/* First Box */}
+						<div className="w-1/2 md:w-full h-40 md:h-1/2 rounded-2xl border  flex items-center justify-center mt-4">
 							<img
-								src="https://cdn3d.iconscout.com/3d/premium/thumb/parcel-unboxing-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--package-cloths-shoes-gift-shopping-delivery-pack-e-commerce-illustrations-4323729.png?f=webp"
-								alt="Unboxing"
-								className="w-4/5 h-4/5 object rounded-lg"
+								src="https://i.pinimg.com/originals/af/5d/8c/af5d8cc8f49cab055cd0328075b87c11.jpg"
+								alt=""
+								className="w-full h-full rounded-2xl"
+							/>
+
+							<CiSquarePlus className="text-5xl mr-2" />
+						</div>
+
+						{/* Second Box */}
+						<div className="w-1/2 md:w-full h-40 md:h-1/2 rounded-2xl borde flex items-center justify-center">
+							<img
+								src="https://img.freepik.com/premium-vector/banner-design-with-shop-now-text-purple-memphis-style-background_626143-1103.jpg"
+								alt=""
+								className="w-full h-full rounded-2xl"
 							/>
 						</div>
+					</div>
+				</div>
 
-						{/* Slider on right, takes 50% of the width */}
-						<div className="w-full md:w-1/2 h-full mt-8 md:mt-0 md:ml-8 md-mr-16">
-							<ImageSlider />
+				<div className="h-2/4 md:w-4/5 w-full md:ml-32 rounded-xl shadow-2xl p-4 overflow-y-auto">
+					<h2 className="font-mono font-semibold text-2xl mb-4 text-center">
+						Transaction History
+					</h2>
+
+					<div className="h-24 w-full shadow-sm px-6 mb-3">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/New-mtn-logo.jpg/640px-New-mtn-logo.jpg"
+							alt=""
+							className="rounded-full h-16 w-16"
+						/>
+						<div className="ml-20 -mt-14">
+							<h4 className="font-bold font-mono">3.5gb 2-days plan</h4>
+							<h5 className="text-green-600 font-mono font-bold"> N 500</h5>
+							<h6 className="font-mono text-slate-300">2:45 pm sept-07-24</h6>
+							<h2 className="text-green-600 font-bold text-xl justify-end flex -mt-12">
+								Successful
+							</h2>
 						</div>
 					</div>
-				</div>
 
-				<br />
-				<br />
-				<br />
-
-				<div className="px-4 sm:px-8 lg:px-16">
-					<h3 className="text-custom-color font-bold text-2xl text-center mb-4">
-						Games
-					</h3>
-
-					<a
-						href=""
-						className="font-semibold text-lg flex justify-center items-center mb-6"
-					>
-						more <IoIosArrowForward className="ml-2 mt-1" />
-					</a>
-
-					<div className="mb-10 w-full sm:w-4/5 mx-auto">
-						<GameCarousel />
+					<div className="h-24 w-full shadow-sm px-6 mb-3">
+						<img
+							src="https://play-lh.googleusercontent.com/mU1dMWlW2KwsnFlv5odNCJ_UPLBxRfXAVloigb4WUjrDBddaNGsre1omOdoB1xEGdFvO"
+							alt=""
+							className="rounded-full h-16 w-16"
+						/>
+						<div className="ml-20 -mt-14">
+							<h4 className="font-bold font-mono">Airtime</h4>
+							<h5 className="text-red-600 font-mono font-bold"> N 200</h5>
+							<h6 className="font-mono text-slate-300">5:42 pm sept-04-24</h6>
+							<h2 className="text-red-600 font-bold text-xl justify-end flex -mt-12">
+								failed
+							</h2>
+						</div>
 					</div>
-				</div>
-
-				<div className="px-4 sm:px-8 lg:px-16 ">
-					{/* Heading */}
-					<h3 className="text-custom-color font-bold text-xl sm:text-2xl text-center sm:text-left mb-4">
-						Gift Card
-					</h3>
-					<br />
-					<br />
-					{/* "More" link */}
-					<a
-						href=""
-						className="font-semibold text-base sm:text-lg flex justify-center sm:justify-end mb-4"
-					>
-						more <IoIosArrowForward className="ml-2 mt-1" />
-					</a>
-
-					{/* Responsive Grid */}
-					<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-5 gap-x-4 sm:gap-x-8 px-4 sm:px-0 justify-center md:flex md:justify-center">
+					<div className="h-28 w-full shadow-sm px-6 mb-3">
 						<img
-							src="https://m.media-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png"
-							alt="Gift Card 1"
-							className="h-44 w-44 rounded-lg border-2 border-custom-color"
+							src="https://cdn.pixabay.com/photo/2013/07/12/15/49/shop-150362_640.png"
+							alt=""
+							className="rounded-full h-16 w-16"
 						/>
-						<img
-							src="https://neocurrency.com/wp-content/uploads/2024/03/Yi5i2xAqiQouV121i1tz12l38cndvabIhrtogDao-2.jpeg"
-							alt="Gift Card 2"
-							className="h-44 w-44 rounded-lg border-2 border-custom-color"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Gift Card 3"
-							className="h-44 w-44 rounded-lg border-2 border-custom-color"
-						/>
-						<img
-							src="https://img.freepik.com/premium-vector/website-advertising-concept_96055-481.jpg"
-							alt="Gift Card 4"
-							className="h-44 w-44 rounded-lg border-2 border-custom-color"
-						/>
+						<div className="ml-20 -mt-14">
+							<h4 className="font-bold font-mono">Market place</h4>
+							<h5 className="font-mono font-bold"> purchase of track suit </h5>
+							<h5 className="text-green-600 font-mono font-bold"> N 2,500</h5>
+							<h6 className="font-mono text-slate-300">5:42 pm sept-04-24</h6>
+							<h2 className="text-green-600 font-bold text-xl justify-end flex -mt-12">
+								Successful
+							</h2>
+						</div>
 					</div>
 				</div>
 
@@ -367,7 +289,7 @@ function Main() {
 						<FaXTwitter className="font-bold text-2xl text-text-color" />
 					</div>
 				</footer>
-				<BottomNavbar/>
+				<BottomNavbar />
 			</section>
 		</>
 	);

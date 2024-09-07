@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaHome, FaSearch, FaBell, FaUser, FaPlus, FaTimes } from 'react-icons/fa';
 import { ImConnection } from "react-icons/im";
 import { GiTv, GiLightningArc } from "react-icons/gi";
-import { TbCloudDataConnection } from "react-icons/tb";
+import { TbTransferVertical } from "react-icons/tb";
 
 const BottomNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ const BottomNavbar = () => {
 
       {/* Overlay Div with 4 Boxes, appearing anywhere */}
       {isMenuOpen && (
-  <div className="fixed bottom-20 left-2/4 transform -translate-x-1/2 bg-white shadow-lg rounded-lg p-4 w-64 z-40 flex justify-between">
+  <div className="fixed bottom-20 left-2/4 transform -translate-x-1/2 shadow-lg rounded-lg p-4 w-64 z-40 flex justify-between bg-white">
     <div className="grid grid-cols-2 gap-4">
       <div className="h-24 w-28 bg-slate-200 text-custom-color font-semibold text-center pt-3 rounded-lg text-lg ">
       <ImConnection className="text-3xl ml-10" /> Airtime
@@ -42,7 +42,7 @@ const BottomNavbar = () => {
       <GiTv className="text-3xl ml-10" /> TV subscription
       </div>
       <div className="h-24 w-28 bg-slate-200 text-custom-color font-semibold text-center pt-3 rounded-lg text-lg ">
-      <TbCloudDataConnection className="text-3xl ml-10"/>  Data
+      <TbTransferVertical className="text-3xl ml-10"/>  Data
       </div>
       <div className="h-24 w-28 bg-slate-200 text-custom-color font-semibold text-center pt-3 rounded-lg text-lg ">
       <GiLightningArc className="text-3xl ml-10" /> Electricity Bills
