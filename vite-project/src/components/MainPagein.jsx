@@ -17,7 +17,7 @@ import { MdQrCodeScanner } from "react-icons/md";
 import { CiSquarePlus } from "react-icons/ci";
 import AdsCarousel from "./AdsCarousel";
 
-function Main() {
+function Mainpagein() {
 	return (
 		<>
 			<section className={`h-screen md:w-4/5 w-full overflow-x-hidden`}>
@@ -295,4 +295,4 @@ function Main() {
 	);
 }
 
-export default Main;
+export default Mainpagein;

@@ -20,7 +20,7 @@ import { RiVisaLine } from "react-icons/ri";
 import { RiMastercardLine } from "react-icons/ri";
 import { SiChase } from "react-icons/si";
 
-function Main() {
+function Mainpage() {
 	return (
 		<>
 			<section className="h-screen w-auto overflow-x-hidden">
@@ -366,4 +366,4 @@ function Main() {
 	);
 }
 
-export default Main;
+export default Mainpage;
