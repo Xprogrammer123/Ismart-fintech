@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Mainpage from "./components/Mainpage";
+import MainPagein from "./components/MainPagein";
 import SelectProvider from "./components/SelectProvider";
 
 const AppRoutes = () => {
@@ -9,7 +10,7 @@ const AppRoutes = () => {
 			<Routes>
 				{/* Define routes for your pages */}
 				<Route path="/" element={<Mainpage />} />
-				<Route path="/mainpagein" element={<Mainpagein />} />
+				<Route path="/mainpagein" element={<MainPagein />} />
 				<Route path="/selectprovider" element={<SelectProvider />} />
 			</Routes>
 		</Router>
@@ -17,3 +18,4 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+
