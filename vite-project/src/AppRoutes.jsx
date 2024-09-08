@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Mainpage from "./components/Mainpage";
-import Mainpagein from "./components/Mainpagein";
 import SelectProvider from "./components/SelectProvider";
 
 const AppRoutes = () => {
