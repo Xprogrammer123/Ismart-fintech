@@ -13,7 +13,6 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { BsTicketPerforated } from "react-icons/bs";
 import { HiGiftTop } from "react-icons/hi2";
 import { BsShop } from "react-icons/bs";
-9;
 import ImageSlider from "./ImageSlider";
 import GameCarousel from "./GameCarousel";
 import Modal from "./modal";
@@ -368,4 +367,3 @@ function Main() {
 }
 
 export default Main;
-	
