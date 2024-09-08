@@ -27,7 +27,7 @@ const AdsCarousel = () => {
 	};
 
 	return (
-		<div className="relative rounded-2xl w-full md:ml-32 ml-0 md:w-4/5 flex md:h-96 h-52 overflow-hidden borde-2 border-gray-300 mb-10">
+		<div className="relative rounded-2xl w-full md:ml-32 ml-0 md:w-4/5 flex md:h-96 h-52 overflow-hidden borde-2 border-gray-900 mb-10">
 			<div
 				className="flex transition-transform duration-1000 ease-in-out"
 				style={{ transform: `translateX(-${currentIndex * 100}%)` }}
