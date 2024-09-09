@@ -17,7 +17,7 @@ export default {
       },
       colors: {
         'custom-color': 'rgba(155, 74, 16, 1)',
-        'text-color':'#fff' // Add your custom color here
+        'text-color':'#fff'
       },
     },
   },

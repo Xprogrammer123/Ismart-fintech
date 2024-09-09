@@ -192,10 +192,10 @@ function SelectProvider() {
 					</div>
 					<div className="grid grid-cols-2">
 						<p className="text-gray-600 text-md font-bold">
-							{state.meterNumber || "N/A"}
+							{state?.meterNumber || "N/A"}
 						</p>
 						<p className="text-gray-600 text-md text-right font-bold">
-							{state.provider || "N/A"}-{state.selectedPackage || "N/A"}
+							{state?.provider || "N/A"}-{state?.selectedPackage || "N/A"}
 						</p>
 					</div>
 				</div>
