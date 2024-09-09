@@ -25,7 +25,7 @@ import GameCarousel from "./GameCarousel";
 function MainPagein() {
 	return (
 		<>
-			<section className={`h-screen md:w-4/5 w-full overflow-x-hidden`}>
+			<section className={`h-screen md:w-[1520px] w-full overflow-x-hidden`}>
 				<header className="w-screen h-16 border border-gray-200 flex justify-between items-center p-4 shadow-sm fixed top-0 left-0 bg-text-color z-10">
 					{/* Logo */}
 					<img
