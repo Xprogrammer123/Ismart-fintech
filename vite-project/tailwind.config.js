@@ -23,6 +23,12 @@ export default {
         'main-color-opa': '#9B4A1080',
         'main-color-30': '#974a024d',
 
+        'main-color-50': '#974A0280',
+
+        'light-opa': 'rgba(255, 255, 255, 0.3)',
+
+        'light-gray-1': 'rgba(128, 128, 128, 0.863)',
+
         'border-1': '#E6E6E6',
         'circle-opa': '#FFF0E9',
         'circle-red': '#E8242D'
