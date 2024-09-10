@@ -1,7 +1,7 @@
 
 function Data() {
   return (
-    <div>
+    <div className="">
         Data
     </div>
   )

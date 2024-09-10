@@ -9,18 +9,20 @@ import AirtimeToCash from "./Pages/AirtimeToCash";
 
 const AppRoutes = () => {
 	return (
-		<Router>
-			<Routes>
-				{/* Define routes for your pages */}
-				<Route path="/" element={<Mainpage />} />
-				<Route path="/mainpagein" element={<MainPagein />} />
-				<Route path="/selectprovider" element={<SelectProvider />} />
+		<div className="phone:pl-4 phone:pr-4 pr-4 pl-4">
+			<Router>
+				<Routes>
+					{/* Define routes for your pages */}
+					<Route path="/" element={<Mainpage />} />
+					<Route path="/mainpagein" element={<MainPagein />} />
+					<Route path="/selectprovider" element={<SelectProvider />} />
 
-				<Route path="'/data" element={<Data />} />
-				<Route path="'/airtime" element={<Airtime />} />
-				<Route path="'/airtimeToCash" element={<AirtimeToCash />} />
-			</Routes>
-		</Router>
+					<Route path="/data" element={<Data />} />
+					<Route path="/airtime" element={<Airtime />} />
+					<Route path="/airtimeToCash" element={<AirtimeToCash />} />
+				</Routes>
+			</Router>
+		</div>
 	);
 };
 

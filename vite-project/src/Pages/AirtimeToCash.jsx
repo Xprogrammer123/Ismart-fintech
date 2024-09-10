@@ -2,7 +2,9 @@
 
 function AirtimeToCash() {
   return (
-    <div>AirtimeToCash</div>
+    <div className="">
+        AirtimeToCashs
+    </div>
   )
 }
 
