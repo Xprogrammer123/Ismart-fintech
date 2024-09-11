@@ -1,7 +1,9 @@
 
 function AirtimePopup() {
   return (
-    <div>AirtimePopup</div>
+    <div>
+        <h2>Confirm Transcation</h2>
+    </div>
   )
 }
 

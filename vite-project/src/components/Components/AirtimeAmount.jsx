@@ -3,7 +3,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import ButtonOne from "./Helpers/ButtonOne";
 
-function AirtimeAmount({ formData, setFormData }) {
+function AirtimeAmount({ formData, setFormData, setSelectedCard }) {
     const [ isComplete, setIsComplete ] = useState(false)
     const navigate = useNavigate()
 
@@ -20,12 +20,11 @@ function AirtimeAmount({ formData, setFormData }) {
     }, [formData])
 
     const handleNext = () => {
-
+        setSelectedCard('airtimePopup')
     } 
 
   return (
     <div className="">
-        
         <div className="relative flex items-center justify-center w-full p-4">
             <div className="absolute left-0" onClick={handleBack}>
                 <FaArrowLeft className="text-[24px] cursor-pointer" />
