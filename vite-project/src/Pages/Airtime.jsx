@@ -3,11 +3,11 @@ import Footer from "../components/Components/Footer"
 import PreviousNumber from "../components/Components/Helpers/PreviousNumber"
 import PurchaseAirtime from "../components/Components/PurchaseAirtime"
 
-function Airtime() {
+function Airtime({ formData, setFormData }) {
   return (
     <div className="">
         {/**NAVBAR */}
-        <PurchaseAirtime />
+        <PurchaseAirtime formData={formData} setFormData={setFormData} />
         <div className="mt-16 flex items-center justify-center">
             <AirtimeAds />
         </div>
